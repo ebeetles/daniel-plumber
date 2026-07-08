@@ -1,0 +1,17 @@
+Read the design spec from spec.md in this directory. Build the complete, production-ready single-page HTML website from it. Output index.html to this directory.
+
+REQUIREMENTS:
+- Mobile-first, fully responsive single HTML file
+- All CSS inline (no external files)
+- Use real Unsplash image URLs — search and download actual photo URLs (use WebSearch to find good ones), do NOT make up URLs or use placeholder images
+- Sticky bottom call bar with phone number (408) 624-2095
+- Fonts: Google Fonts via @import
+- No JavaScript frameworks — vanilla JS only if needed
+- Mark every unconfirmed fact with [placeholder] — do not fabricate
+- SEO meta tags, Open Graph tags
+- Accessibility: proper heading hierarchy, alt text on all images, aria labels on CTAs
+- Phone number (408) 624-2095 — every instance is a real tel: link
+- Preferred-reduced-motion respected
+- Deploy to Vercel ready (no build step needed)
+
+Write the complete file. Do NOT stop partway. Do NOT write to any other file.
