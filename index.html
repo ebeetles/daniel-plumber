@@ -1,859 +1,1059 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daniel's Plumbing &amp; Handyman Service | San Jose, CA</title>
-<meta name="description" content="San Jose's plumber and handyman — one call handles the whole list. Drain cleaning, faucet repair, pipe fixes, drywall, and more. Nextdoor-referred. Call (408) 624-2095.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://danielsplumbing.vercel.app/">
-
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Daniel's Plumbing &amp; Handyman Service | San Jose, CA">
-<meta property="og:description" content="One call handles the whole list. San Jose's plumber-and-handyman — you don't have to figure out which one you need.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1200&q=80">
-<meta property="og:url" content="https://danielsplumbing.vercel.app/">
-<meta property="og:locale" content="en_US">
-<meta property="og:site_name" content="Daniel's Plumbing &amp; Handyman Service">
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Daniel's Plumbing &amp; Handyman Service | San Jose, CA">
-<meta name="twitter:description" content="One call handles the whole list. Plumbing and handyman, San Jose.">
-<meta name="twitter:image" content="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1200&q=80">
-
-<!-- Structured Data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
-  "name": "Daniel's Plumbing & Handyman Service",
-  "telephone": "+1-408-624-2095",
-  "email": "plumbingmaster8@gmail.com",
-  "areaServed": "San Jose, CA",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "San Jose",
-    "addressRegion": "CA",
-    "addressCountry": "US"
-  },
-  "openingHours": "Mo-Su 00:00-20:00",
-  "priceRange": "$$",
-  "description": "Plumbing and handyman services in San Jose. Drain cleaning, faucet repair, pipe repair, drywall patching, furniture assembly, and more."
-}
-</script>
-
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>">
-
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Instrument+Sans:wght@400;500;600&family=Roboto+Mono:wght@400&display=swap');
-
-/* ─── Tokens ─── */
-:root {
-  --paper:       #F1EFE8;
-  --off-paper:   #E8E6DE;
-  --ink:         #1A1916;
-  --pencil:      #6B6860;
-  --rule:        #CCC9C0;
-  --copper:      #B5611D;
-  --copper-pale: rgba(181, 97, 29, 0.09);
-  --check:       #3A7A4E;
-  --white:       #FDFCF9;
-
-  --serif:  'Playfair Display', Georgia, serif;
-  --sans:   'Instrument Sans', system-ui, sans-serif;
-  --mono:   'Roboto Mono', 'Courier New', monospace;
-
-  --radius-sm: 6px;
-  --radius:    12px;
-  --max-w:     600px;
-}
-
-/* ─── Reset ─── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-
-body {
-  background: var(--paper);
-  color: var(--ink);
-  font-family: var(--sans);
-  font-size: 1rem;
-  line-height: 1.65;
-  -webkit-font-smoothing: antialiased;
-  padding-bottom: 72px;
-}
-
-img { display: block; max-width: 100%; }
-a  { color: var(--copper); }
-
-/* ─── Utilities ─── */
-.container {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding: 0 22px;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px; height: 1px;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  white-space: nowrap;
-  border: 0;
-}
-
-.skip-link {
-  position: absolute;
-  left: -999px; top: 0;
-  background: var(--copper);
-  color: var(--white);
-  font-family: var(--sans);
-  font-weight: 600;
-  font-size: .875rem;
-  padding: 10px 18px;
-  border-radius: 0 0 var(--radius-sm) 0;
-  z-index: 300;
-  text-decoration: none;
-}
-.skip-link:focus { left: 0; }
-
-/* ─── Header ─── */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(241, 239, 232, 0.94);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--rule);
-}
-
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 22px;
-  max-width: var(--max-w);
-  margin: 0 auto;
-}
-
-.brand {
-  font-family: var(--serif);
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: var(--ink);
-  text-decoration: none;
-  letter-spacing: -.01em;
-}
-.brand em {
-  font-style: normal;
-  color: var(--copper);
-}
-
-.header-call {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--copper);
-  color: var(--white);
-  font-family: var(--sans);
-  font-weight: 600;
-  font-size: .8rem;
-  letter-spacing: .02em;
-  padding: 8px 16px;
-  border-radius: 999px;
-  text-decoration: none;
-  transition: background .15s, transform .1s;
-}
-.header-call:hover  { background: #9e5419; }
-.header-call:active { transform: scale(.97); }
-
-/* ─── Hero ─── */
-.hero {
-  position: relative;
-  background: var(--ink);
-  overflow: hidden;
-}
-
-.hero-photo {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 30%;
-  opacity: .32;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-  padding: 72px 22px 68px;
-  max-width: var(--max-w);
-  margin: 0 auto;
-}
-
-.hero-eyebrow {
-  display: inline-block;
-  font-family: var(--mono);
-  font-size: .72rem;
-  color: var(--copper);
-  text-transform: uppercase;
-  letter-spacing: .13em;
-  margin-bottom: 22px;
-  border: 1px solid rgba(181, 97, 29, .35);
-  padding: 5px 12px;
-  border-radius: 999px;
-}
-
-.hero h1 {
-  font-family: var(--serif);
-  font-weight: 700;
-  font-size: clamp(2rem, 7.5vw, 3rem);
-  line-height: 1.12;
-  color: var(--white);
-  margin-bottom: 18px;
-  max-width: 16ch;
-}
-
-.hero-sub {
-  color: rgba(253, 252, 249, .72);
-  font-size: 1.05rem;
-  line-height: 1.6;
-  max-width: 38ch;
-  margin-bottom: 32px;
-}
-
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--copper);
-  color: var(--white);
-  font-family: var(--sans);
-  font-weight: 600;
-  font-size: 1rem;
-  padding: 15px 26px;
-  border-radius: var(--radius);
-  text-decoration: none;
-  transition: background .15s, transform .1s;
-}
-.btn-primary:hover  { background: #9e5419; }
-.btn-primary:active { transform: scale(.98); }
-
-.btn-phone-num {
-  font-family: var(--mono);
-  font-size: .92rem;
-}
-
-/* ─── Section base ─── */
-section {
-  padding: 56px 0;
-}
-
-.section-label {
-  display: block;
-  font-family: var(--mono);
-  font-size: .72rem;
-  text-transform: uppercase;
-  letter-spacing: .13em;
-  color: var(--copper);
-  margin-bottom: 10px;
-}
-
-section h2 {
-  font-family: var(--serif);
-  font-weight: 700;
-  font-size: clamp(1.55rem, 5vw, 2rem);
-  line-height: 1.18;
-  color: var(--ink);
-  margin-bottom: 14px;
-}
-
-/* ─── Value Props ─── */
-.value-section {
-  border-bottom: 1px solid var(--rule);
-}
-
-.value-intro {
-  color: var(--pencil);
-  font-size: 1rem;
-  max-width: 42ch;
-  margin-bottom: 32px;
-}
-
-.value-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1px;
-  background: var(--rule);
-  border: 1px solid var(--rule);
-  border-radius: var(--radius);
-  overflow: hidden;
-}
-
-.value-item {
-  background: var(--paper);
-  padding: 20px 22px;
-}
-
-.value-item-label {
-  font-family: var(--sans);
-  font-weight: 600;
-  font-size: .9rem;
-  color: var(--ink);
-  margin-bottom: 4px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.value-item-label::before {
-  content: '';
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--copper);
-  flex-shrink: 0;
-}
-
-.value-item p {
-  color: var(--pencil);
-  font-size: .9rem;
-  line-height: 1.5;
-}
-
-/* ─── Services / Work Order ─── */
-.services-section {
-  background: var(--off-paper);
-  border-top: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
-}
-
-.services-section h2 {
-  margin-bottom: 8px;
-}
-
-.services-intro {
-  color: var(--pencil);
-  font-size: .95rem;
-  max-width: 44ch;
-  margin-bottom: 28px;
-}
-
-/* Work order card */
-.work-order {
-  border: 1px solid var(--rule);
-  border-radius: var(--radius);
-  overflow: hidden;
-  background: var(--paper);
-}
-
-.work-order-header {
-  background: var(--ink);
-  color: var(--white);
-  padding: 14px 20px;
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 12px;
-}
-
-.work-order-title {
-  font-family: var(--mono);
-  font-size: .75rem;
-  text-transform: uppercase;
-  letter-spacing: .12em;
-  color: rgba(253,252,249,.6);
-}
-
-.work-order-id {
-  font-family: var(--mono);
-  font-size: .7rem;
-  color: var(--copper);
-  letter-spacing: .08em;
-  display: none;
-}
-
-@media (min-width: 480px) {
-  .work-order-id { display: inline; }
-}
-
-.work-order-cols {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-@media (min-width: 500px) {
-  .work-order-cols {
-    grid-template-columns: 1fr 1fr;
-  }
-  .work-order-col + .work-order-col {
-    border-left: 1px solid var(--rule);
-    border-top: none;
-  }
-}
-
-.work-order-col + .work-order-col {
-  border-top: 1px solid var(--rule);
-}
-
-.work-order-col-head {
-  padding: 11px 18px;
-  border-bottom: 1px solid var(--rule);
-  background: var(--off-paper);
-  font-family: var(--sans);
-  font-size: .72rem;
-  font-weight: 600;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: var(--pencil);
-}
-
-.work-order-col ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.work-order-col li {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-  padding: 12px 18px;
-  border-bottom: 1px solid var(--rule);
-  font-size: .93rem;
-  color: var(--ink);
-}
-
-.work-order-col li:last-child {
-  border-bottom: none;
-}
-
-.check-mark {
-  color: var(--check);
-  font-size: .85rem;
-  flex-shrink: 0;
-  font-family: var(--mono);
-  font-weight: 400;
-}
-
-.work-order-footer {
-  border-top: 1px solid var(--rule);
-  background: var(--off-paper);
-  padding: 12px 18px;
-  font-family: var(--mono);
-  font-size: .72rem;
-  color: var(--pencil);
-  letter-spacing: .04em;
-}
-
-/* ─── Testimonials ─── */
-.testimonials-section {
-  border-bottom: 1px solid var(--rule);
-}
-
-.testimonials-section h2 {
-  margin-bottom: 24px;
-}
-
-.quote-block {
-  border-left: 3px solid var(--copper);
-  padding: 18px 20px;
-  background: var(--copper-pale);
-  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-  margin-bottom: 16px;
-}
-
-.quote-block blockquote {
-  font-family: var(--serif);
-  font-size: 1.1rem;
-  font-style: italic;
-  line-height: 1.55;
-  color: var(--ink);
-  margin-bottom: 10px;
-}
-
-.quote-source {
-  font-family: var(--mono);
-  font-size: .72rem;
-  color: var(--pencil);
-  text-transform: uppercase;
-  letter-spacing: .08em;
-}
-
-.testimonials-note {
-  margin-top: 20px;
-  color: var(--pencil);
-  font-size: .9rem;
-  line-height: 1.55;
-  max-width: 44ch;
-}
-
-/* ─── Contact ─── */
-.contact-section {
-  background: var(--ink);
-  color: var(--white);
-  border-top: none;
-  padding-bottom: 64px;
-}
-
-.contact-section .section-label {
-  color: rgba(181, 97, 29, .9);
-}
-
-.contact-section h2 {
-  color: var(--white);
-  margin-bottom: 6px;
-}
-
-.contact-tagline {
-  color: rgba(253,252,249,.55);
-  font-size: .95rem;
-  margin-bottom: 40px;
-}
-
-.big-phone {
-  display: block;
-  font-family: var(--serif);
-  font-weight: 700;
-  font-size: clamp(2.1rem, 9vw, 3.4rem);
-  color: var(--white);
-  text-decoration: none;
-  letter-spacing: -.02em;
-  line-height: 1.1;
-  border-bottom: 2px solid rgba(181, 97, 29, .45);
-  padding-bottom: 28px;
-  margin-bottom: 28px;
-  transition: color .15s;
-}
-.big-phone:hover { color: #e8a96a; }
-
-.contact-meta {
-  display: grid;
-  gap: 0;
-}
-
-.contact-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  padding: 14px 0;
-  border-bottom: 1px solid rgba(255,255,255,.08);
-}
-.contact-row:last-child { border-bottom: none; }
-
-.contact-row-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: var(--radius-sm);
-  background: rgba(255,255,255,.06);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-  flex-shrink: 0;
-}
-
-.contact-row-body {
-  flex: 1;
-  padding-top: 2px;
-}
-
-.contact-row-label {
-  font-family: var(--mono);
-  font-size: .68rem;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  color: rgba(253,252,249,.4);
-  margin-bottom: 2px;
-}
-
-.contact-row-value {
-  font-family: var(--mono);
-  font-size: .95rem;
-  color: rgba(253,252,249,.85);
-}
-
-.contact-row-value a {
-  color: rgba(253,252,249,.85);
-  text-decoration: none;
-  transition: color .15s;
-}
-.contact-row-value a:hover  { color: #e8a96a; }
-.contact-row-value a:focus-visible { color: #e8a96a; outline: 2px solid var(--copper); border-radius: 2px; }
-
-/* ─── Footer ─── */
-footer {
-  background: #0f0d0b;
-  padding: 20px 22px;
-  text-align: center;
-}
-
-.footer-inner {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  color: rgba(253,252,249,.28);
-  font-family: var(--mono);
-  font-size: .7rem;
-  letter-spacing: .04em;
-  line-height: 2;
-}
-
-.footer-inner a {
-  color: rgba(253,252,249,.28);
-  text-decoration: none;
-}
-.footer-inner a:hover { color: rgba(253,252,249,.5); }
-
-/* ─── Sticky Call Bar ─── */
-.sticky-bar {
-  position: fixed;
-  left: 0; right: 0; bottom: 0;
-  z-index: 200;
-  background: var(--copper);
-  box-shadow: 0 -3px 16px rgba(0,0,0,.18);
-}
-
-.sticky-bar a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 15px 22px;
-  max-width: var(--max-w);
-  margin: 0 auto;
-  color: var(--white);
-  text-decoration: none;
-  font-family: var(--sans);
-  font-weight: 600;
-  font-size: 1rem;
-  letter-spacing: .01em;
-  transition: background .15s;
-}
-.sticky-bar:hover { background: #9e5419; }
-.sticky-bar:active { transform: scale(.99); }
-
-.pulse {
-  width: 8px; height: 8px;
-  border-radius: 50%;
-  background: var(--white);
-  flex-shrink: 0;
-  animation: pulse 1.8s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50%       { opacity: .4; transform: scale(1.35); }
-}
-
-/* ─── Responsive ─── */
-@media (min-width: 500px) {
-  .value-grid {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-@media (min-width: 680px) {
-  :root { --max-w: 680px; }
-  .hero-content { padding: 88px 22px 80px; }
-  section { padding: 68px 0; }
-}
-
-/* ─── Reduced Motion ─── */
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  .pulse { animation: none; }
-  *, *::before, *::after {
-    transition-duration: .01ms !important;
-    animation-duration: .01ms !important;
-    animation-iteration-count: 1 !important;
-  }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniel — Plumbing &amp; Handyman | San Jose · Sunnyvale · Mountain View</title>
+  <meta name="description" content="Daniel is a licensed plumber and handyman serving San Jose, Sunnyvale, Mountain View, and nearby cities. Faucets, toilets, disposals, screen doors, cabinet repairs — one call clears the whole list. (408) 624-2095">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://daniel-plumber.vercel.app/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Daniel — Plumbing &amp; Handyman | Silicon Valley">
+  <meta property="og:description" content="Plumbing and handyman work, Silicon Valley. One call clears the whole list. (408) 624-2095">
+  <meta property="og:url" content="https://daniel-plumber.vercel.app/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:image:alt" content="Plumber working on residential pipe installation">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Daniel — Plumbing &amp; Handyman | Silicon Valley">
+  <meta name="twitter:description" content="One call for plumbing and handyman work in San Jose, Sunnyvale, Mountain View. (408) 624-2095">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+    /* ─── Reset ─── */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ─── Tokens ─── */
+    :root {
+      --bg:          #F7F8FA;
+      --ink:         #111827;
+      --ink-mid:     #374151;
+      --blue:        #1A56DB;
+      --blue-fill:   #EFF6FF;
+      --blue-dark:   #1447C7;
+      --green:       #059669;
+      --green-fill:  #ECFDF5;
+      --amber:       #D97706;
+      --amber-fill:  #FFFBEB;
+      --gray:        #6B7280;
+      --border:      #E5E7EB;
+      --white:       #FFFFFF;
+      --font-display: 'Bitter', Georgia, serif;
+      --font-body:    'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono:    'JetBrains Mono', 'Courier New', monospace;
+    }
+
+    /* ─── Base ─── */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.65;
+      padding-bottom: 72px;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    /* ─── Utility ─── */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    .section-label {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 0.875rem;
+    }
+
+    /* ─── Nav ─── */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.125rem;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+      text-decoration: none;
+    }
+
+    .nav-phone {
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--blue);
+      text-decoration: none;
+      padding: 0.4rem 1rem;
+      border: 1.5px solid var(--blue);
+      border-radius: 6px;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+
+    .nav-phone:hover {
+      background: var(--blue);
+      color: var(--white);
+    }
+
+    .nav-phone:focus-visible {
+      outline: 3px solid var(--blue);
+      outline-offset: 3px;
+    }
+
+    /* ─── Hero ─── */
+    .hero-wrap {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 55fr 45fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 1rem;
+    }
+
+    .hero-h1 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 3.1rem;
+      line-height: 1.07;
+      letter-spacing: -0.035em;
+      color: var(--ink);
+      margin-bottom: 1.75rem;
+    }
+
+    /* ─── The List ─── */
+    .the-list {
+      margin-bottom: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .list-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.65rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .check-box {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      background: var(--green-fill);
+      border: 1.5px solid var(--green);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      color: var(--green);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .job-desc {
+      flex: 1;
+      font-size: 0.925rem;
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    .job-tag {
+      flex-shrink: 0;
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 0.18rem 0.45rem;
+      border-radius: 4px;
+    }
+
+    .job-tag.plumbing {
+      background: var(--blue-fill);
+      color: var(--blue);
+    }
+
+    .job-tag.handyman {
+      background: var(--amber-fill);
+      color: var(--amber);
+    }
+
+    /* Check animation */
+    @media (prefers-reduced-motion: no-preference) {
+      .check-box {
+        opacity: 0;
+        transform: scale(0.5);
+        transition: opacity 0.2s ease, transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+
+      .check-box.visible {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* ─── Hero CTA ─── */
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--blue);
+      color: var(--white);
+      text-decoration: none;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.875rem 1.75rem;
+      border-radius: 8px;
+      transition: background 0.15s ease, transform 0.1s ease;
+    }
+
+    .hero-cta:hover {
+      background: var(--blue-dark);
+      transform: translateY(-1px);
+    }
+
+    .hero-cta:focus-visible {
+      outline: 3px solid var(--blue);
+      outline-offset: 3px;
+    }
+
+    /* ─── Hero photo ─── */
+    .hero-photo img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    /* ─── Differentiator ─── */
+    .diff-wrap {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .diff-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .diff-h2 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.85rem;
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+      color: var(--ink);
+    }
+
+    .diff-points {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .diff-point {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .diff-point-num {
+      flex-shrink: 0;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--blue);
+      padding-top: 0.2rem;
+    }
+
+    .diff-point-text {
+      font-size: 0.95rem;
+      color: var(--ink-mid);
+      line-height: 1.6;
+    }
+
+    .diff-point-text strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    /* ─── Services ─── */
+    .services-wrap {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .services-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .services-header {
+      padding: 2.5rem 2.5rem 0;
+    }
+
+    .services-h2 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.75rem;
+      letter-spacing: -0.025em;
+      color: var(--ink);
+      margin-bottom: 0.25rem;
+    }
+
+    .services-sub {
+      font-size: 0.9rem;
+      color: var(--gray);
+      margin-bottom: 2rem;
+    }
+
+    .services-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .service-col {
+      padding: 0 2.5rem 2.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .service-col:last-child {
+      border-left: 1px solid var(--border);
+    }
+
+    .service-col-head {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 1.5rem 0 1rem;
+    }
+
+    .service-col-head h3 {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--ink);
+    }
+
+    .col-tag {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.15rem 0.4rem;
+      border-radius: 3px;
+    }
+
+    .col-tag.plumbing { background: var(--blue-fill); color: var(--blue); }
+    .col-tag.handyman { background: var(--amber-fill); color: var(--amber); }
+
+    .service-items {
+      list-style: none;
+      padding: 0;
+    }
+
+    .service-items li {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      padding: 0.55rem 0;
+      font-size: 0.875rem;
+      color: var(--ink-mid);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .service-items li:last-child {
+      border-bottom: none;
+    }
+
+    .service-items li::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--border);
+      flex-shrink: 0;
+    }
+
+    .services-photo {
+      border-top: 1px solid var(--border);
+    }
+
+    .services-photo img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      object-position: center 40%;
+      display: block;
+    }
+
+    /* ─── How it usually goes ─── */
+    .jobs-wrap {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .jobs-header {
+      margin-bottom: 2.5rem;
+    }
+
+    .jobs-h2 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.75rem;
+      letter-spacing: -0.025em;
+      color: var(--ink);
+      margin-bottom: 0.4rem;
+    }
+
+    .jobs-sub {
+      font-size: 0.9rem;
+      color: var(--gray);
+      max-width: 52ch;
+    }
+
+    .job-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+
+    .job-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+    }
+
+    .job-card-area {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray);
+      padding-bottom: 0.875rem;
+      margin-bottom: 0.875rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .job-card-rows {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1rem;
+    }
+
+    .job-card-rows li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      padding: 0.45rem 0;
+      font-size: 0.85rem;
+      color: var(--ink);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .job-card-rows li:last-child {
+      border-bottom: none;
+    }
+
+    .card-check {
+      color: var(--green);
+      font-size: 0.7rem;
+      font-weight: 700;
+      margin-right: 0.25rem;
+    }
+
+    .card-desc {
+      flex: 1;
+    }
+
+    .card-tag {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.15rem 0.4rem;
+      border-radius: 3px;
+    }
+
+    .card-tag.plumbing { background: var(--blue-fill); color: var(--blue); }
+    .card-tag.handyman { background: var(--amber-fill); color: var(--amber); }
+
+    .job-card-note {
+      font-size: 0.8rem;
+      color: var(--gray);
+      padding-top: 0.5rem;
+    }
+
+    /* ─── Contact ─── */
+    .contact-wrap {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+
+    .contact-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .contact-left h2 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.85rem;
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-left p {
+      font-size: 0.95rem;
+      color: var(--ink-mid);
+      max-width: 42ch;
+      line-height: 1.65;
+    }
+
+    .contact-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.25rem;
+    }
+
+    .phone-large {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 2.5rem;
+      letter-spacing: -0.04em;
+      color: var(--blue);
+      text-decoration: none;
+      line-height: 1;
+      transition: color 0.15s;
+    }
+
+    .phone-large:hover {
+      color: var(--blue-dark);
+    }
+
+    .phone-large:focus-visible {
+      outline: 3px solid var(--blue);
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+
+    .contact-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--blue);
+      color: var(--white);
+      text-decoration: none;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.875rem 1.75rem;
+      border-radius: 8px;
+      transition: background 0.15s ease, transform 0.1s ease;
+    }
+
+    .contact-cta:hover {
+      background: var(--blue-dark);
+      transform: translateY(-1px);
+    }
+
+    .contact-cta:focus-visible {
+      outline: 3px solid var(--blue);
+      outline-offset: 3px;
+    }
+
+    .area-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .area-tag {
+      font-size: 0.8rem;
+      font-weight: 500;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 0.25rem 0.75rem;
+      color: var(--ink-mid);
+    }
+
+    .nextdoor-note {
+      font-size: 0.825rem;
+      color: var(--gray);
+      line-height: 1.5;
+    }
+
+    /* ─── Sticky Call Bar ─── */
+    .sticky-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      background: var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.875rem 1.5rem;
+    }
+
+    .sticky-bar-text {
+      font-size: 0.825rem;
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 1.4;
+    }
+
+    .sticky-bar-cta {
+      flex-shrink: 0;
+      display: inline-block;
+      background: var(--blue);
+      color: var(--white);
+      text-decoration: none;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 0.625rem 1.25rem;
+      border-radius: 6px;
+      white-space: nowrap;
+      transition: background 0.15s ease;
+    }
+
+    .sticky-bar-cta:hover {
+      background: var(--blue-dark);
+    }
+
+    .sticky-bar-cta:focus-visible {
+      outline: 2px solid var(--white);
+      outline-offset: 2px;
+    }
+
+    /* ─── Mobile ─── */
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .hero-photo {
+        order: -1;
+      }
+
+      .hero-photo img {
+        height: 260px;
+      }
+
+      .hero-h1 {
+        font-size: 2.1rem;
+      }
+
+      .hero-wrap {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+      }
+
+      .diff-inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .services-columns {
+        grid-template-columns: 1fr;
+      }
+
+      .service-col:last-child {
+        border-left: none;
+        border-top: 1px solid var(--border);
+      }
+
+      .services-header {
+        padding: 1.75rem 1.5rem 0;
+      }
+
+      .service-col {
+        padding: 0 1.5rem 1.75rem;
+      }
+
+      .job-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .phone-large {
+        font-size: 2rem;
+      }
+
+      .diff-wrap,
+      .services-wrap,
+      .jobs-wrap,
+      .contact-wrap {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .sticky-bar-text {
+        display: none;
+      }
+
+      .sticky-bar {
+        justify-content: center;
+      }
+
+      .sticky-bar-cta {
+        width: 100%;
+        max-width: 360px;
+        text-align: center;
+        padding: 0.75rem 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<a class="skip-link" href="#main">Skip to main content</a>
-
-<!-- ─── Header ─── -->
-<header class="site-header">
-  <div class="header-inner">
-    <a class="brand" href="#top">Daniel<em>.</em></a>
-    <a class="header-call" href="tel:+14086242095" aria-label="Call Daniel at (408) 624-2095">
-      Call Now
-    </a>
-  </div>
-</header>
-
-<main id="main">
+  <!-- ─── Nav ─── -->
+  <header class="nav" role="banner">
+    <div class="nav-inner">
+      <span class="nav-name">Daniel</span>
+      <a href="tel:+14086242095" class="nav-phone" aria-label="Call Daniel at (408) 624-2095">(408) 624-2095</a>
+    </div>
+  </header>
 
   <!-- ─── Hero ─── -->
-  <section id="top" class="hero" aria-label="Introduction">
-    <img
-      class="hero-photo"
-      src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1400&q=75"
-      srcset="
-        https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=75 800w,
-        https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1400&q=75 1400w"
-      sizes="100vw"
-      alt="Plumber working on pipes under a sink — the kind of practical repair Daniel handles every day"
-      width="1400"
-      height="933"
-      fetchpriority="high"
-      loading="eager"
-    >
-    <div class="hero-content">
-      <span class="hero-eyebrow">Plumbing &amp; Handyman &middot; San Jose, CA</span>
-      <h1>One call handles<br>the whole list.</h1>
-      <p class="hero-sub">Drain clogged? Faucet dripping? Something broken? Daniel is San Jose's plumber-and-handyman — you don't need to sort the problem before calling.</p>
-      <a class="btn-primary" href="tel:+14086242095" aria-label="Call Daniel at (408) 624-2095">
-        Call &nbsp;<span class="btn-phone-num">(408)&thinsp;624-2095</span>
-      </a>
-    </div>
-  </section>
-
-  <!-- ─── Value Props ─── -->
-  <section class="value-section" aria-labelledby="value-heading">
+  <div class="hero-wrap">
     <div class="container">
-      <span class="section-label">Why neighbors call Daniel</span>
-      <h2 id="value-heading">Every job earns the next one</h2>
-      <p class="value-intro">Daniel's work comes entirely from Nextdoor neighbors in San Jose. No advertising. Just homeowners passing his number to the next person — which only happens when the job was done right.</p>
-      <div class="value-grid" role="list">
-        <div class="value-item" role="listitem">
-          <p class="value-item-label">Straight answers</p>
-          <p>No upsells. No scare tactics. Just what needs fixing and what it costs.</p>
-        </div>
-        <div class="value-item" role="listitem">
-          <p class="value-item-label">One person shows up</p>
-          <p>You call Daniel. Daniel answers. Daniel comes. Not a dispatcher, not a crew.</p>
-        </div>
-        <div class="value-item" role="listitem">
-          <p class="value-item-label">Fair, predictable pricing</p>
-          <p>What he quotes is what you pay. No surprises at the end of the job.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+      <div class="hero">
+        <!-- Left: the list -->
+        <div class="hero-content">
+          <p class="hero-eyebrow">Plumbing · Handyman · Silicon Valley</p>
+          <h1 class="hero-h1">Whatever's on your list,<br>one call handles it.</h1>
 
-  <!-- ─── Services ─── -->
-  <section id="services" class="services-section" aria-labelledby="services-heading">
-    <div class="container">
-      <span class="section-label">Services</span>
-      <h2 id="services-heading">What Daniel fixes</h2>
-      <p class="services-intro">Plumber-licensed and handyman-skilled. He figures out which hat to put on once he sees the job — so you don't have to.</p>
-
-      <div class="work-order" role="region" aria-label="Services work order">
-        <div class="work-order-header">
-          <span class="work-order-title">Services · Work Order</span>
-          <span class="work-order-id">Daniel's Plumbing &amp; Handyman · SJ</span>
-        </div>
-        <div class="work-order-cols">
-          <div class="work-order-col">
-            <div class="work-order-col-head">Plumbing</div>
-            <ul aria-label="Plumbing services">
-              <li><span class="check-mark" aria-hidden="true">✓</span> Drain cleaning</li>
-              <li><span class="check-mark" aria-hidden="true">✓</span> Faucet repair &amp; installation</li>
-              <li><span class="check-mark" aria-hidden="true">✓</span> Pipe repair</li>
-              <li><span class="check-mark" aria-hidden="true">✓</span> Toilet &amp; fixture repair</li>
-              <li><span class="check-mark" aria-hidden="true">✓</span> General plumbing repairs</li>
-            </ul>
-          </div>
-          <div class="work-order-col">
-            <div class="work-order-col-head">Handyman</div>
-            <ul aria-label="Handyman services">
-              <li><span class="check-mark" aria-hidden="true">✓</span> Drywall patching</li>
-              <li><span class="check-mark" aria-hidden="true">✓</span> Furniture assembly</li>
-              <li><span class="check-mark" aria-hidden="true">✓</span> Small home repairs</li>
-              <li><span class="check-mark" aria-hidden="true">✓</span> General handyman work</li>
-            </ul>
-          </div>
-        </div>
-        <div class="work-order-footer">
-          Serving San Jose, CA · Leigh Ave area · Available until 8 PM daily
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── Testimonials ─── -->
-  <section class="testimonials-section" aria-labelledby="testimonials-heading">
-    <div class="container">
-      <span class="section-label">On Nextdoor</span>
-      <h2 id="testimonials-heading">What neighbors say</h2>
-
-      <div class="quote-block">
-        <blockquote cite="https://www.nextdoor.com">
-          "Efficient, friendly, super honest, and very reasonable."
-        </blockquote>
-        <p class="quote-source">— San Jose neighbor · Nextdoor</p>
-      </div>
-
-      <p class="testimonials-note">Daniel's reputation lives entirely on Nextdoor referrals — homeowners in the Leigh Ave area who hand his number to the next person who needs a plumber, a handyman, or both. That chain only stays unbroken with consistent, honest work.</p>
-    </div>
-  </section>
-
-  <!-- ─── Contact ─── -->
-  <section class="contact-section" aria-labelledby="contact-heading">
-    <div class="container">
-      <span class="section-label">Get in touch</span>
-      <h2 id="contact-heading">One call. That's it.</h2>
-      <p class="contact-tagline">Daniel answers his own phone.</p>
-
-      <a class="big-phone" href="tel:+14086242095" aria-label="Call Daniel at (408) 624-2095">
-        (408)&thinsp;624-2095
-      </a>
-
-      <div class="contact-meta">
-        <div class="contact-row">
-          <div class="contact-row-icon" aria-hidden="true">✉</div>
-          <div class="contact-row-body">
-            <div class="contact-row-label">Email</div>
-            <div class="contact-row-value">
-              <a href="mailto:plumbingmaster8@gmail.com">plumbingmaster8@gmail.com</a>
+          <div class="the-list" role="list" aria-label="Sample jobs Daniel handles">
+            <div class="list-row" role="listitem">
+              <div class="check-box" aria-hidden="true">✓</div>
+              <span class="job-desc">Kitchen faucet dripping</span>
+              <span class="job-tag plumbing">Plumbing</span>
+            </div>
+            <div class="list-row" role="listitem">
+              <div class="check-box" aria-hidden="true">✓</div>
+              <span class="job-desc">Cabinet door won't close</span>
+              <span class="job-tag handyman">Handyman</span>
+            </div>
+            <div class="list-row" role="listitem">
+              <div class="check-box" aria-hidden="true">✓</div>
+              <span class="job-desc">Toilet keeps running</span>
+              <span class="job-tag plumbing">Plumbing</span>
+            </div>
+            <div class="list-row" role="listitem">
+              <div class="check-box" aria-hidden="true">✓</div>
+              <span class="job-desc">Screen door off its track</span>
+              <span class="job-tag handyman">Handyman</span>
+            </div>
+            <div class="list-row" role="listitem">
+              <div class="check-box" aria-hidden="true">✓</div>
+              <span class="job-desc">Garbage disposal dead</span>
+              <span class="job-tag plumbing">Plumbing</span>
+            </div>
+            <div class="list-row" role="listitem">
+              <div class="check-box" aria-hidden="true">✓</div>
+              <span class="job-desc">Loose railing on the porch</span>
+              <span class="job-tag handyman">Handyman</span>
             </div>
           </div>
+
+          <a href="tel:+14086242095" class="hero-cta" aria-label="Call Daniel at (408) 624-2095">
+            Call Daniel &mdash; (408) 624-2095
+          </a>
         </div>
-        <div class="contact-row">
-          <div class="contact-row-icon" aria-hidden="true">⏱</div>
-          <div class="contact-row-body">
-            <div class="contact-row-label">Hours</div>
-            <div class="contact-row-value">Available daily until 8:00 PM</div>
+
+        <!-- Right: photo -->
+        <div class="hero-photo">
+          <img
+            src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=900&q=80"
+            alt="Plumber working on residential pipe installation"
+            width="900"
+            height="480"
+            loading="eager"
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Differentiator ─── -->
+  <div class="diff-wrap">
+    <div class="container">
+      <div class="diff-inner">
+        <div>
+          <span class="section-label">The difference</span>
+          <h2 class="diff-h2">A plumber who also does handyman work.<br>That's rarer than it sounds.</h2>
+        </div>
+        <div class="diff-points">
+          <div class="diff-point">
+            <span class="diff-point-num">01</span>
+            <p class="diff-point-text"><strong>Most tradespeople specialize.</strong> A plumber won't touch your stuck door. A handyman won't touch your pipes. Figuring out who handles which job — and coordinating two separate calls — is more work than most people bother with.</p>
           </div>
-        </div>
-        <div class="contact-row">
-          <div class="contact-row-icon" aria-hidden="true">📍</div>
-          <div class="contact-row-body">
-            <div class="contact-row-label">Area served</div>
-            <div class="contact-row-value">San Jose, CA · Leigh Ave area</div>
+          <div class="diff-point">
+            <span class="diff-point-num">02</span>
+            <p class="diff-point-text"><strong>Daniel does both.</strong> Which means one call, one visit, and a cleared list. Leaky faucet and a broken screen door? Same trip. Garbage disposal and a cabinet hinge? Done together.</p>
+          </div>
+          <div class="diff-point">
+            <span class="diff-point-num">03</span>
+            <p class="diff-point-text"><strong>All of his work comes through Nextdoor.</strong> No ads. No billboard. Neighbors tell neighbors, and Daniel earns the next job by doing the current one right.</p>
           </div>
         </div>
       </div>
     </div>
-  </section>
-
-</main>
-
-<!-- ─── Footer ─── -->
-<footer>
-  <div class="footer-inner">
-    <p>Daniel's Plumbing &amp; Handyman Service · San Jose, CA</p>
-    <p>
-      <a href="tel:+14086242095">(408) 624-2095</a>
-      &nbsp;·&nbsp;
-      <a href="mailto:plumbingmaster8@gmail.com">plumbingmaster8@gmail.com</a>
-    </p>
   </div>
-</footer>
 
-<!-- ─── Sticky Call Bar ─── -->
-<div class="sticky-bar" role="complementary" aria-label="Call button">
-  <a href="tel:+14086242095" aria-label="Tap to call Daniel at (408) 624-2095">
-    <span class="pulse" aria-hidden="true"></span>
-    Tap to Call &ensp;<span style="font-family:var(--mono);font-size:.9rem;">(408)&thinsp;624-2095</span>
-  </a>
-</div>
+  <!-- ─── Services ─── -->
+  <div class="services-wrap">
+    <div class="container">
+      <div class="services-header" style="margin-bottom: 1.75rem;">
+        <span class="section-label">What Daniel fixes</span>
+      </div>
+      <div class="services-card">
+        <div class="services-header">
+          <h2 class="services-h2">The full list</h2>
+          <p class="services-sub">Plumbing and handyman work under one roof — or under one sink, as the case may be.</p>
+        </div>
+        <div class="services-columns">
+          <div class="service-col">
+            <div class="service-col-head">
+              <h3>Plumbing</h3>
+              <span class="col-tag plumbing">Plumbing</span>
+            </div>
+            <ul class="service-items" aria-label="Plumbing services">
+              <li>Faucet repair and replacement</li>
+              <li>Toilet repair (flapper, fill valve, wax ring)</li>
+              <li>Garbage disposal installation and repair</li>
+              <li>Under-sink leaks and supply lines</li>
+              <li>Shower and bathtub fixtures</li>
+              <li>Water shutoff valves</li>
+              <li>Drain clearing</li>
+              <li>Water heater inspection and minor repair</li>
+            </ul>
+          </div>
+          <div class="service-col">
+            <div class="service-col-head">
+              <h3>Handyman</h3>
+              <span class="col-tag handyman">Handyman</span>
+            </div>
+            <ul class="service-items" aria-label="Handyman services">
+              <li>Cabinet hinges, doors, and hardware</li>
+              <li>Door adjustments, locks, and weatherstripping</li>
+              <li>Screen door repair and replacement</li>
+              <li>Light fixture and ceiling fan installation</li>
+              <li>Drywall patching and minor repair</li>
+              <li>Shelf and anchor installation</li>
+              <li>Window hardware and latches</li>
+              <li>General household repairs</li>
+            </ul>
+          </div>
+        </div>
+        <div class="services-photo">
+          <img
+            src="https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?auto=format&fit=crop&w=1200&q=80"
+            alt="Organized handyman toolkit with wrenches, levels, and hand tools"
+            width="1200"
+            height="220"
+            loading="lazy"
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── How it usually goes ─── -->
+  <div class="jobs-wrap">
+    <div class="container">
+      <div class="jobs-header">
+        <span class="section-label">How it usually goes</span>
+        <h2 class="jobs-h2">The neighborhood keeps calling back</h2>
+        <p class="jobs-sub">Every job Daniel gets comes through a Nextdoor referral. Here's the kind of work that earns the next one.</p>
+      </div>
+      <div class="job-cards" role="list" aria-label="Typical job examples">
+        <!-- Card 1 -->
+        <div class="job-card" role="listitem">
+          <div class="job-card-area">San Jose, residential</div>
+          <ul class="job-card-rows" aria-label="Jobs completed">
+            <li>
+              <span class="card-check" aria-hidden="true">✓</span>
+              <span class="card-desc">Leaky kitchen faucet</span>
+              <span class="card-tag plumbing">Plumbing</span>
+            </li>
+            <li>
+              <span class="card-check" aria-hidden="true">✓</span>
+              <span class="card-desc">Screen door off track</span>
+              <span class="card-tag handyman">Handyman</span>
+            </li>
+          </ul>
+          <p class="job-card-note">Two jobs. One visit.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="job-card" role="listitem">
+          <div class="job-card-area">Sunnyvale, residential</div>
+          <ul class="job-card-rows" aria-label="Jobs completed">
+            <li>
+              <span class="card-check" aria-hidden="true">✓</span>
+              <span class="card-desc">Garbage disposal replacement</span>
+              <span class="card-tag plumbing">Plumbing</span>
+            </li>
+            <li>
+              <span class="card-check" aria-hidden="true">✓</span>
+              <span class="card-desc">Cabinet hinge adjustment</span>
+              <span class="card-tag handyman">Handyman</span>
+            </li>
+          </ul>
+          <p class="job-card-note">Called Monday. Fixed Monday.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="job-card" role="listitem">
+          <div class="job-card-area">Mountain View, residential</div>
+          <ul class="job-card-rows" aria-label="Jobs completed">
+            <li>
+              <span class="card-check" aria-hidden="true">✓</span>
+              <span class="card-desc">Running toilet flapper</span>
+              <span class="card-tag plumbing">Plumbing</span>
+            </li>
+            <li>
+              <span class="card-check" aria-hidden="true">✓</span>
+              <span class="card-desc">Bathroom drywall patch</span>
+              <span class="card-tag handyman">Handyman</span>
+            </li>
+          </ul>
+          <p class="job-card-note">In and out in under two hours.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Contact ─── -->
+  <div class="contact-wrap" style="border-top: 1px solid var(--border);">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="contact-left">
+          <span class="section-label">Reach Daniel</span>
+          <h2>Ready to clear the list?</h2>
+          <p>Call or text. Daniel serves San Jose, Sunnyvale, Mountain View, Santa Clara, Cupertino, and the surrounding area. Most calls get a same-day or next-day response.</p>
+        </div>
+        <div class="contact-right">
+          <a href="tel:+14086242095" class="phone-large" aria-label="Call Daniel at (408) 624-2095">(408) 624-2095</a>
+          <a href="tel:+14086242095" class="contact-cta" aria-label="Call Daniel now">Call now</a>
+          <div class="area-list" aria-label="Service areas">
+            <span class="area-tag">San Jose</span>
+            <span class="area-tag">Sunnyvale</span>
+            <span class="area-tag">Mountain View</span>
+            <span class="area-tag">Santa Clara</span>
+            <span class="area-tag">Cupertino</span>
+          </div>
+          <p class="nextdoor-note">Found Daniel on Nextdoor? You're in the right place — all of his work comes through neighbor recommendations.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Sticky Call Bar ─── -->
+  <div class="sticky-bar" role="complementary" aria-label="Call to action">
+    <p class="sticky-bar-text">Plumbing &amp; handyman · San Jose, Sunnyvale, Mountain View</p>
+    <a href="tel:+14086242095" class="sticky-bar-cta" aria-label="Call Daniel at (408) 624-2095">
+      Call (408) 624-2095
+    </a>
+  </div>
+
+  <script>
+    (function () {
+      var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReduced) return;
+
+      var checks = document.querySelectorAll('.check-box');
+      checks.forEach(function (el, i) {
+        setTimeout(function () {
+          el.classList.add('visible');
+        }, 300 + i * 130);
+      });
+    }());
+  </script>
 
 </body>
 </html>

@@ -1,111 +1,86 @@
-# Design Spec — Daniel's Plumbing & Handyman Service
-
-## Concept: "The Running List"
-
-Every home has one. Not written anywhere, just real: the kitchen drain that's getting slow, the faucet that drips, the drywall patch that's been three weeks from "getting done." Most homeowners let the list grow because they don't know who to call first — is this a plumber job or a handyman job? Two calls. Two quotes. Two trips.
-
-Daniel eliminates that friction entirely. He is the plumber-and-handyman — one person who figures out which hat to put on once he sees the job. The site IS the list. Services rendered as a clean work-order document — already crossed off for a hundred San Jose homes, ready for yours. The visual language is the form you'd hand a trusted tradesman: precise, legible, no-frills. Not a brochure. A record of work done.
-
-Why this fits Daniel specifically:
-- His business is built on Nextdoor referrals — the neighbor who texts you his number already trusts him. The site just needs to confirm what they said.
-- The "both plumber AND handyman" differentiator is the story. Most service sites hide this under a generic "services" section. Here it IS the structure.
-- The work-order metaphor conveys competence without bragging — it's the confidence of someone who doesn't need to sell you, just show you what he does.
+# "The Running List"
+## Design Spec — Daniel Plumbing & Handyman
 
 ---
 
-## Design Tokens
+### Concept
 
-### Color
+**The insight:** Every Bay Area homeowner has one. A sticky on the fridge, a note in their phone: *dripping faucet. garbage disposal. cabinet hinge. toilet running. screen door off the track.* Some items are plumbing. Some are handyman. Most people file this list under "eventually" because sorting out who handles which item, and then calling two different people, feels like more work than the problems themselves.
 
-| Name | Hex | Role | Justification |
-|------|-----|------|---------------|
-| Warm Paper | `#F1EFE8` | Main background | Like actual copy paper — warm, not bright. Grounding the "document" metaphor. |
-| Ink | `#1A1916` | Primary text, hero bg, contact bg | Near-black with warm undertone. Ink on paper — the obvious pair. |
-| Pencil | `#6B6860` | Secondary text | The grey of pencil marks — supporting but not competing. |
-| Rule | `#CCC9C0` | Dividers, table rules | Like ledger lines. Thin, present, functional. |
-| Copper | `#B5611D` | Accent, checkmarks, CTA | True plumbing copper — the material that runs through every home. Only warm chromatic color. Subconscious trust signal. |
-| Copper Light | `rgba(181,97,29,.08)` | Subtle section tint | Very faint wash for emphasis sections. |
-| Check Green | `#3A7A4E` | Done-state indicators | The relief of a completed item. Used sparingly — just the service checkmarks. |
-| Off-Paper | `#E8E6DE` | Services section bg | Slightly darker than main paper — the "form" reads as a bounded document. |
+Daniel removes that friction entirely. He's both a plumber and a handyman — which means one call clears the whole list. The site should make this immediately visceral, not explain it. The hero is not a tagline with a stock photo. The hero IS the list — job line items, already checked off in green. Not "here's what Daniel can do." Here's what Daniel has already done, for someone exactly like you.
 
-### Typography
+**Why this concept fits Daniel specifically:**
 
-| Role | Face | Weight | Justification |
-|------|------|--------|---------------|
-| Display | **Playfair Display** | 600, 700 | Serif authority without formality. Conveys craft and trust — the kind of type on a well-made invoice or a lawyer's business card. Never used in this series. |
-| Body | **Instrument Sans** | 400, 500, 600 | Clean, modern, highly legible at small sizes. Functional without feeling tech-ish. Never used in this series. |
-| Utility / Numbers | **Roboto Mono** | 400 | Phone number, hours, the "precise" information deserves monospace precision. Never used in this series. |
+1. **The dual trade is the product.** Most residential tradespeople specialize. The "running list" metaphor makes the dual-trade value self-evident without needing to argue for it. You see a list of mixed plumbing + handyman jobs, all checked — and you immediately understand.
 
-No palette overlap with completed sites. No font overlap with completed sites.
+2. **Nextdoor-only referrals means every job earns the next.** This is not a guy who advertises. He survives entirely on neighbor-to-neighbor trust. The "cleared list" visual shows the outcome of that trust rather than claiming it. No testimonial carousel, no star-rating badge. The work speaks for itself as work-order records.
 
-### Layout
-
-Single column, max 600px, lots of breathing room. Not a dense information site — the restraint IS the confidence.
-
-```
-┌─────────────────────────────────┐
-│ DANIEL              [Call Now] │  ← sticky header
-├─────────────────────────────────┤
-│ [Photo: plumber at work]        │
-│  with dark ink overlay          │
-│                                 │
-│  "One call handles              │  ← Playfair Display 700
-│   the whole list."              │
-│  San Jose · Plumbing & Handyman │
-│  [Call (408) 624-2095]          │
-├─────────────────────────────────┤
-│ Every job earns the next one    │  ← Value props, 3-col desktop
-│  Straight answers               │
-│  One person shows up            │
-│  Fair pricing                   │
-├─────────────────────────────────┤
-│ ╔═══════════════════════════╗   │  ← Work order document
-│ ║ SERVICES · WORK ORDER     ║   │
-│ ╠═══════════════╦═══════════╣   │
-│ ║ PLUMBING      ║ HANDYMAN  ║   │
-│ ╠═══════════════╬═══════════╣   │
-│ ║ ✓ Drain clean ║ ✓ Drywall ║   │
-│ ║ ✓ Faucet rep  ║ ✓ Assembl ║   │
-│ ║ ✓ Pipe repair ║ ✓ Repairs ║   │
-│ ╚═══════════════╩═══════════╝   │
-├─────────────────────────────────┤
-│ What neighbors say              │  ← 1-2 quote blocks
-│  "Efficient, friendly,          │
-│   super honest, very reasonable"│
-├─────────────────────────────────┤
-│ [Dark section]                  │  ← Contact
-│  (408) 624-2095   ← huge serif  │
-│  Daniel answers his own phone.  │
-│  email · hours · location       │
-├─────────────────────────────────┤
-│ [STICKY: TAP TO CALL]           │
-└─────────────────────────────────┘
-```
+3. **No storefront — the site is his trust anchor.** When a neighbor says "call Daniel," this site is what you find. It needs to signal competence and specificity immediately — not look like another generic contractor site. The work-order visual grammar does that instantly: this is a person who tracks jobs, shows up, and finishes things.
 
 ---
 
-## Content
+### Design Tokens
 
-- **Business:** Daniel's Plumbing & Handyman Service
-- **Phone:** (408) 624-2095
-- **Email:** plumbingmaster8@gmail.com
-- **Location:** San Jose, CA (Leigh Ave area)
-- **Services — Plumbing:** Drain cleaning, faucet repair & installation, pipe repair, toilet & fixture repair, general plumbing
-- **Services — Handyman:** Drywall patching, furniture assembly, small home repairs, general handyman
-- **Hours:** Available until 8:00 PM daily
-- **Tone:** Quiet confidence. A tradesman who doesn't need to sell you — he just shows you what he does.
-- **Key message:** You don't need to figure out if it's a plumbing job or a handyman job. Call Daniel. He figures it out.
+**Palette:**
+
+| Token | Value | Justification |
+|-------|-------|---------------|
+| `--bg` | `#F7F8FA` | Almost white with a faint cool cast — fresh clipboard paper, not warm artisan parchment. Every warm-toned palette in this series has been used. The cool break is deliberate. |
+| `--ink` | `#111827` | Near-black with a blue undertone. Printer ink. Reads as text that belongs on a form. |
+| `--blue` | `#1A56DB` | Clear, reliable, zero warmth. Bay Area sky. Water running through a clean pipe. Municipal confidence. This is not a design-trend blue — it's the color of something official being resolved. |
+| `--blue-fill` | `#EFF6FF` | Checked-item backgrounds and hover states. Keeps the blue accent from overloading. |
+| `--green` | `#059669` | The "done" signal. Checkmarks are this color throughout — they appear before anything else on load. Green is universally task-completion. |
+| `--green-fill` | `#ECFDF5` | Paired fill for green elements. |
+| `--gray` | `#6B7280` | Category labels, service tags, metadata. Recedes appropriately. |
+| `--border` | `#E5E7EB` | The ruled lines on the form. Barely there. |
+| `--amber` | `#D97706` | Handyman category label text color. |
+| `--amber-fill` | `#FFFBEB` | Handyman tag background. |
+
+**Typography:**
+
+| Role | Face | Justification |
+|------|------|---------------|
+| Display | **Bitter** (slab serif) | When you look at an actual work order or service receipt, the type is a slab or condensed sans — printed for speed and trust, not beauty. Bitter has that authority. Sturdy stroke contrast, confident weight. Not used elsewhere in the series. Not chosen for elegance. Chosen because it fits a clipboard. |
+| Body | **Plus Jakarta Sans** | Clean humanist sans. Contemporary without being tech-bro. Reads quickly on mobile, which is where most callers will land. Not used in this series. |
+| Detail | **JetBrains Mono** | Small monospace for category tags (PLUMBING / HANDYMAN), used like a typewriter label. Reinforces the form/data-entry feeling without the manual typewriter affect of Special Elite (already used on Souren). |
+
+**Type Scale:**
+- H1: Bitter 700, 3rem / 1.1 line-height (desktop), 2.2rem (mobile)
+- H2: Bitter 600, 1.75rem
+- H3: Bitter 600, 1.125rem
+- Body: Plus Jakarta Sans 400, 1rem / 1.65 line-height
+- Tags/labels: JetBrains Mono 500, 0.7rem, uppercase, letter-spacing 0.08em
+
+**Layout:**
+
+Desktop hero: two-column, 55/45 split. Left: eyebrow + headline + checked list + CTA. Right: plumbing photo, clipped with slight border-radius (8px). The photo is supporting context — the list is the hero.
+
+Mobile: single column, photo appears as a contained image block above the list. List items span full width.
+
+Ruled lines: thin 1px `--border` borders bottom each list row, exactly like a form.
+
+**Signature element:** The pre-checked hero list. Six job line items — alternating plumbing and handyman — rendered with green ✓ checkmarks, job descriptions, and inline category tags. On page load, each checkmark pops in with a 120ms staggered delay (the satisfaction of watching a list get cleared). This is the one animated moment; everything else is static.
 
 ---
 
-## Photo Direction
+### Content Outline
 
-Primary (hero): Unsplash `photo-1504328345606-18bbc8c9d7d1`
-- Plumber at work — practical, authentic
-- Verified live URL
+1. **Nav** — "Daniel" wordmark left, phone number link right
+2. **Hero** — Eyebrow (Plumbing · Handyman · Silicon Valley) + H1 + checked list + CTA button
+3. **The Difference** — Three-sentence paragraph explaining why plumber + handyman together matters
+4. **The Full List** — Two-column service list: Plumbing / Handyman. Styled as form line items, not a bulleted grid.
+5. **The Neighborhood Keeps Calling Back** — Three job-record cards (Nextdoor context explained, no fake quotes)
+6. **Reach Daniel** — Big phone number as CTA, area served, Nextdoor note
+7. **Sticky call bar** — Fixed bottom, persistent on mobile
 
-Secondary (optional, services area or not used): Unsplash `photo-1585771724684-38269d6639fd`
-- Plumbing tools
-- Verified live URL
+---
 
-Approach: Dark ink overlay (opacity 0.65) over the hero image so the text reads cleanly on the warm-dark background. The photo adds texture and credibility — you see real work happening — without overwhelming the type.
+### Photo Direction
+
+**Hero photo** — Unsplash ID: `1504328345606`
+A tradesperson working on a pipe in a wall. Shows actual work in progress. Not a posed portrait, not a stock-photo handshake. Alt text: "Plumber working on residential pipe installation." Right column on desktop, contained block above list on mobile.
+
+**Services section accent** — Unsplash ID: `1562259929`
+Organized toolkit display. Used as a contained image in the services section, visually grounding the "handyman" column. Shows the range of tools — wrenches, levels, drills — which speaks to the dual-trade without captioning it. Alt text: "Organized handyman toolkit with wrenches, levels, and hand tools."
+
+**Photo treatment:** Both photos at object-fit: cover, no filters, no overlays. The design earns its identity through type and layout, not photography treatment.
