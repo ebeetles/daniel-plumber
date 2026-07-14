@@ -1,17 +1,39 @@
-Read the design spec from spec.md in this directory. Build the complete, production-ready single-page HTML website from it. Output index.html to this directory.
+STEP 1: Write spec.md
+Read CLAUDE.md in this directory first. Then write a design spec (spec.md) that meets these standards:
+
+The spec MUST start with a genuine DESIGN CONCEPT — not a layout description. Look at the completed sites in CLAUDE.md for the bar:
+- "The Watchmaker's Bench" (M&S Watch Repair)
+- "The House Call" (Vivace Piano Service)
+- "1959" (Say Ray Auto — built around founding year)
+- "The Repair Counter" (Souren — claim-ticket/workbench metaphor)
+
+These aren't "blue background + nice fonts." They have a POINT OF VIEW.
+
+For Daniel: he's a plumber AND handyman. That's rare and it's his differentiator. Most homeowners don't know whether a problem needs a plumber or a handyman — Daniel removes that friction. He's also Nextdoor-referred only, meaning every job has to earn the next one. The concept should emerge from these truths.
+
+The spec must include:
+- Thesis paragraph explaining the concept and WHY it fits Daniel
+- Design tokens (colors, type, layout) with JUSTIFICATION for each choice — not just "looks nice"
+- Content outline
+- Photo direction (Unsplash keywords since no real photos exist)
+
+Do NOT write generic SaaS-landing-page structure. This is for a solo tradesman — the site should feel human, not corporate.
+
+STEP 2: Build index.html from spec.md
+Build the complete production-ready single-page HTML site. Output index.html to this directory.
 
 REQUIREMENTS:
 - Mobile-first, fully responsive single HTML file
 - All CSS inline (no external files)
-- Use real Unsplash image URLs — search and download actual photo URLs (use WebSearch to find good ones), do NOT make up URLs or use placeholder images
-- Sticky bottom call bar with phone number (408) 624-2095
+- Use REAL Unsplash images — search for and verify URLs exist (use WebFetch), do NOT make up image URLs
+- Sticky bottom call bar with phone number (408) 624-2095 as real tel: link
+- Every phone number instance is a clickable tel:+14086242095 link
 - Fonts: Google Fonts via @import
 - No JavaScript frameworks — vanilla JS only if needed
-- Mark every unconfirmed fact with [placeholder] — do not fabricate
+- ZERO placeholders. Do not use the word [placeholder] anywhere. If a fact is unconfirmed, rephrase to not need it.
 - SEO meta tags, Open Graph tags
 - Accessibility: proper heading hierarchy, alt text on all images, aria labels on CTAs
-- Phone number (408) 624-2095 — every instance is a real tel: link
-- Preferred-reduced-motion respected
+- Prefers-reduced-motion respected
 - Deploy to Vercel ready (no build step needed)
 
-Write the complete file. Do NOT stop partway. Do NOT write to any other file.
+Write the COMPLETE file. Do not stop partway. Do not write to any other file.
